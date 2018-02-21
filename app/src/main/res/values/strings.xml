@@ -3,4 +3,5 @@
     <string name="DolarAcolon">Dolares a Colones</string>
     <string name="ColonAdolar">Colones a Dolares</string>
     <string name="Convertir">Convertir</string>
+    <string name="WaterHint">Monto a Convertir</string>
 </resources>

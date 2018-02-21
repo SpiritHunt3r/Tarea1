@@ -26,7 +26,7 @@
         android:layout_marginBottom="32dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Monto a Convertir"
+        android:hint="@string/WaterHint"
         android:inputType="textPersonName|number"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/BTConvertir"
