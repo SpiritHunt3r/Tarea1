@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ec.tec.ac.cr.juan_jop96.conversor.MainActivity">
+
+
+    <Button
+        android:id="@+id/BTConvertir"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="106dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/Convertir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ETMonto" />
+
+    <EditText
+        android:id="@+id/ETMonto"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Monto a Convertir"
+        android:inputType="textPersonName|number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/BTConvertir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RD-Group" />
+
+    <RadioGroup
+        android:id="@+id/RD-Group"
+        android:layout_width="179dp"
+        android:layout_height="143dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/ETMonto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/RDCaD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/ColonAdolar" />
+
+        <RadioButton
+            android:id="@+id/RDDaC"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/DolarAcolon" />
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>
