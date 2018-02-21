@@ -22,16 +22,22 @@ public class MainActivity extends AppCompatActivity {
         BTConvertir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String MtC = Monto.getText().toString();
-                float Pre = Float.parseFloat(MtC);
+                String MtC = MtC = Monto.getText().toString();
+                float Pre;
                 if (MtC.isEmpty())
-                    MtC = "0";
-                if (DaC.isChecked())
-                    Pre *= 569.32;
+                    Pre = 0;
                 else
+                    Pre = Float.parseFloat(MtC);
+                if (DaC.isChecked()) {
+                    Pre *= 569.32;
+                    MtC = String.valueOf(Pre);
+                    Toast.makeText(MainActivity.this, "₡ "+MtC, Toast.LENGTH_LONG).show();
+                }
+                else {
                     Pre /= 569.32;
-                MtC = String.valueOf(Pre);
-                Toast.makeText(MainActivity.this, MtC, Toast.LENGTH_LONG).show();
+                    MtC = String.valueOf(Pre);
+                    Toast.makeText(MainActivity.this, "$ "+MtC, Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
